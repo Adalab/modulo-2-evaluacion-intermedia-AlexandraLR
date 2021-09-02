@@ -22,3 +22,7 @@ function guessTheNumber()
     const value = inputNumber.value;
     console.log(randomNumber)
 }
+
+//EVENTOS//
+//EventListener para que el botón active al click la función guessTheNumber//
+buttonPrueba.addEventListener(   'click'  ,   guessTheNumber  );
