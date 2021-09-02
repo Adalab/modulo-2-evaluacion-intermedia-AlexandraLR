@@ -6,12 +6,10 @@ const inputNumber = document.querySelector('.js_clientnumber');
 const inputClue = document.querySelector('.js_clue');
 const inputCounter = document.querySelector('.js_counter');
 const buttonPrueba = document.querySelector('.js_buttonprueba');
-
-
-//variable del contador que empieza en cero
-let count = 0;
 //defino valor máximo de getRandomNumber en MaxNumber como constante para que no pase de 100
 const maxNumber = 100;
+//variable del contador que empieza en cero
+let count = 0;
 
 //FUNCIONES//
 // dada por el ejercicio, función que saca números random
