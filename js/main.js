@@ -41,15 +41,10 @@ function guessTheNumber()
         inputClue.innerHTML = 'Demasiado alto';
     }
     
-}
-
-//Contador de intentos
-function incrementClick() {
+    //CONTADOR que funciona con el mismo Listener.
     inputCounter.innerHTML = ++count;
 }
 
 //EVENTOS//
 //EventListener para que el botón active al click la función guessTheNumber//
 buttonPrueba.addEventListener(   'click'  ,   guessTheNumber );
-//EventListener para el contador//
-buttonPrueba.addEventListener(   'click'  ,   incrementClick );
