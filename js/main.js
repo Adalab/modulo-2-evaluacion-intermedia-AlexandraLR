@@ -18,9 +18,28 @@ function getRandomNumber(max) {
 // Función guessTheNumber para sacar el número random por la consola y que lo compare al que la usuaria mete en el input//
 function guessTheNumber() 
 {
-    const randomNumber = getRandomNumber(maxNumber);
+
+    //Random number para hacer pruebas, porque no me está sacando el "has ganado"
+    const randomNumber = 4 ;
     const value = inputNumber.value;
     console.log(randomNumber)
+
+// If else añadido para comparar el valor que introduce la usuaria con el random y sacar las pistas en su caja HTML.
+debugger;
+    if(value > maxNumber)
+    {
+        inputClue.innerHTML = 'El número debe estar entre 1 y 100';
+    }
+    else if (value === randomNumber) {
+        inputClue.innerHTML = 'Has ganado campeona!!!';
+    }
+    else if (value < randomNumber) {
+        inputClue.innerHTML = 'Demasiado bajo';
+    }
+    else if (value > randomNumber) {
+        inputClue.innerHTML = 'Demasiado alto';
+    }
+
 }
 
 //EVENTOS//
