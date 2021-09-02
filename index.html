@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adivina el número</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+
+  <body>
+    <!-- Parte superior del layout -->
+    <h1 class="title">Adivina el número</h1>
+    <p class="subtitle">Introduce aquí tu número:</p>
+    <!-- formulario de introducción de número, le añado ID para el CSS  -->
+    <form class="forminputnumber">
+      <input
+        class="js_clientnumber"
+        type="text"
+        name="name"
+        id="forminputnumber"
+        placeholder="Introduce un número"
+      />
+    </form>
+    <!-- Botón Prueba, le añado ID para el CSS -->
+    <input
+      type="button"
+      value="Prueba"
+      id="buttonPrueba"
+      class="js_buttonprueba"
+    />
+    <!-- Campo Pista, le añado ID para el CSS -->
+    <p class="js_clue" id="clueinput">
+      Pista: Escribe el número y dale a Prueba
+    </p>
+    <!-- Campo Contador -->
+    <p id="counterinput">
+      <span class="js_counter"> Número de intentos: 0</span>
+    </p>
+  </body>
+  <script src="./js/main.js"></script>
+</html>
