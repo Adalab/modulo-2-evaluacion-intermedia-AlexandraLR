@@ -7,6 +7,9 @@ const inputClue = document.querySelector('.js_clue');
 const inputCounter = document.querySelector('.js_counter');
 const buttonPrueba = document.querySelector('.js_buttonprueba');
 
+
+//variable del contador que empieza en cero
+let count = 0;
 //defino valor máximo de getRandomNumber en MaxNumber como constante para que no pase de 100
 const maxNumber = 100;
 
@@ -39,10 +42,16 @@ function guessTheNumber()
     else if (value > randomNumber) {
         inputClue.innerHTML = 'Demasiado alto';
     }
+    
+}
 
- 
+//Contador de intentos
+function incrementClick() {
+    inputCounter.innerHTML = ++count;
 }
 
 //EVENTOS//
 //EventListener para que el botón active al click la función guessTheNumber//
-buttonPrueba.addEventListener(   'click'  ,   guessTheNumber  );
+buttonPrueba.addEventListener(   'click'  ,   guessTheNumber );
+//EventListener para el contador//
+buttonPrueba.addEventListener(   'click'  ,   incrementClick );
