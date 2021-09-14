@@ -18,8 +18,9 @@ function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
 }
 // Función guessTheNumber para sacar el número random por la consola y que lo compare al que la usuaria mete en el input
-function guessTheNumber() {
+function guessTheNumber(ev) {
     const value = parseInt(inputNumber.value);
+    ev.preventDefault();
     feedbackPainter(value);
     console.log(randomNumber)
     //pongo el console.log del valor que añadimos para que se vea también por la consola
@@ -30,18 +31,25 @@ function guessTheNumber() {
 
 function feedbackPainter(value) {
 
+    let msg = 'El formato añadido no es correcto';
+
     if(value > maxNumber || value < minNumber ) {
-        inputClue.innerHTML = 'El número debe estar entre 1 y 100';
+        msg = 'El número debe estar entre 1 y 100';
     }
     else if (value === randomNumber) {
-        inputClue.innerHTML = 'Has ganado campeona!!!';
+        msg= 'Has ganado campeona!!!';
     }
     else if (value < randomNumber) {
-        inputClue.innerHTML = 'Demasiado bajo';
+        msg = 'Demasiado bajo';
     }
-    else {
-        inputClue.innerHTML = 'Demasiado alto';
+    else if (value > randomNumber) {
+        msg = 'Demasiado alto';
     }
+    printHtml(msg);
+}
+
+function printHtml(msg){
+    inputClue.innerHTML = msg;
 }
 
 function increaseCounter(){
